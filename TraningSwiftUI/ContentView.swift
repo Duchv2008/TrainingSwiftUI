@@ -22,30 +22,32 @@ struct ContentView: View {
     }
 
     var body: some View {
-        NavigationView {
-            List(fruits) { fruit in
-                Image(fruit.image)
-                    .resizable()
-                    .frame(width: 50, height: 50, alignment: Alignment.center)
-                    .cornerRadius(25)
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(fruit.name)
-                        .font(Font.largeTitle)
-                        .foregroundColor(Color.red)
-                        .fontWeight(Font.Weight.bold)
-                    Text(fruit.description)
-                        .font(Font.subheadline)
-                }
-            }.background(Color.clear)
+        VStack(alignment: .center, spacing: 0) {
+            Text("1")
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center).background(Color.red)
+            Text("2").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center).background(Color.blue)
         }
-
+//        NavigationView {
+//            List(fruits) { fruit in
+//                Image(fruit.image)
+//                    .resizable()
+//                    .frame(width: 50, height: 50, alignment: Alignment.center)
+//                    .cornerRadius(25)
+//                VStack(alignment: .leading, spacing: 5) {
+//                    Text(fruit.name)
+//                        .font(Font.largeTitle)
+//                        .foregroundColor(Color.red)
+//                        .fontWeight(Font.Weight.bold)
+//                    Text(fruit.description)
+//                        .font(Font.subheadline)
+//                }
+//            }.background(Color.clear)
+//        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .background(Color.blue)
-            .edgesIgnoringSafeArea(.all)
     }
 }
